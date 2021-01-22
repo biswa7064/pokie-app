@@ -48,15 +48,7 @@ const CartoonList = ({history}) => {
                 <button onClick={()=>history.push(`/cartoon/${search}`)}>Search</button>
             </div>
             {showData()}
-            {!_.isEmpty(cartoonList.data) && (
-                <ReactPaginate
-                pageCount ={Math.ceil(cartoonList.count/15)}
-                pageRangeDisplayed = {2}
-                marginPagesDisplayed={1}
-                onPageChange={(data)=>fetchData(data.selected+1)}
-                containerClassName='pagination'
-                />
-            )}
+           
         </div>
     )
 }

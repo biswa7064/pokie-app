@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { GetCartoon } from '../actions/GetCartoonList'
 import _ from 'lodash'
-import { Link } from 'react-router-dom'
+
 
 
 const Cartoon = ({match}) => {
@@ -15,7 +15,7 @@ const Cartoon = ({match}) => {
 
     useEffect(()=>{
         dispatch(GetCartoon(cartoonName))
-    },[])
+    })
 
     const showData = ()=>{
         if(!_.isEmpty(cartoonState.data[cartoonName])){
@@ -26,10 +26,10 @@ const Cartoon = ({match}) => {
             <div className='list-wrapper'>
                 <h1 style = {{color:'green',fontSize:'50px',fontWeight:'bold'}}>{cartoonName.toUpperCase()}</h1>
                 <h1>Sprites</h1>
-                <img src = {cartoonData.sprites.front_default} />
-                <img src = {cartoonData.sprites.back_default} />
-                <img src = {cartoonData.sprites.front_shiny} />
-                <img src = {cartoonData.sprites.back_shiny} />
+                <img src = {cartoonData.sprites.front_default} alt='1' />
+                <img src = {cartoonData.sprites.back_default} alt='1' />
+                <img src = {cartoonData.sprites.front_shiny} alt='1' />
+                <img src = {cartoonData.sprites.back_shiny} alt='1' />
             </div>
             <div className='list-wrapper'>
             <h1>Stats</h1>

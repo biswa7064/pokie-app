@@ -45,11 +45,3 @@ nav a{
   margin-top: 20px;
 }
 
-.pagination{
-  display: flex;
-  width: 500px;
-  margin: auto;
-  list-style: none;
-  justify-content: space-between;
-  padding: 0;
-}
