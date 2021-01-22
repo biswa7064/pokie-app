@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import _ from 'lodash';
 import { GetCartoonList } from '../actions/GetCartoonList';
 import { Link } from 'react-router-dom';
-import ReactPaginate from 'react-paginate';
+
 
 
 const CartoonList = ({history}) => {
@@ -14,7 +14,7 @@ const CartoonList = ({history}) => {
 
     useEffect(()=>{
         fetchData()
-    },[])
+    })
 
     const fetchData =(page=1)=>{
         dispatch(GetCartoonList(page))
