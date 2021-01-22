@@ -22,3 +22,23 @@ export const GetCartoonList = (page)=>async dispatch=>{
         })
     }
 }
+
+export const GetCartoon = (cartoon)=>async dispatch=>{
+    try{
+        dispatch({
+            type:'CARTOON_MULTIPLE_LOADING'
+        })     
+
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${cartoon}`)
+
+        dispatch({
+            type:'CARTOON_MULTIPLE_SUCCESS',
+            payload:res.data,
+            cartoonName:cartoon
+        })
+    }catch(e){
+        dispatch({
+            type:'CARTOON_MULTIPLE_FAIL'
+        })
+    }
+}
