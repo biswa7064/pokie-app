@@ -19,12 +19,14 @@ const CartoonList = () => {
 
     const showData = ()=>{
         if(!_.isEmpty(cartoonList.data)){
-            return cartoonList.data.map((el)=>{
-                return <>
+            return <div className='list-wrapper'>
+                {cartoonList.data.map((el)=>{
+                return <div className='cartoon-wrapper'>
                 <p>{el.name}</p>
-                <Link to={`/cartoon/${el.name}`}>View</Link>
-                </>
-            })
+                <Link to={`/cartoon/${el.name}`} style={{textDecoration:'none',fontWeight:'bold'}}>View</Link>
+                </div>            
+            })}
+            </div>
         }
         if(cartoonList.isLoading){
             return <p>Loading...</p>

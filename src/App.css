@@ -13,11 +13,26 @@ nav{
   height: 60px;
   align-items: center;
   justify-content: flex-end;
-  background-color:green;
+  background-color:coral;
 }
 
 nav a{
   margin-right: 50px;
   color: white;
+  text-decoration: none;
+}
+
+.list-wrapper{
+  width: 30%;
+  margin: auto;
+  justify-content: center;  
+}
+
+.cartoon-wrapper{
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid chocolate;
   text-decoration: none;
 }
